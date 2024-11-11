@@ -1,0 +1,107 @@
+<!--Font Awesome CDN-->
+     
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="stylegallery.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .navBtn {
+      cursor: pointer;
+    }
+    .navBtn + li {
+      display: none;
+    }
+
+  
+  </style>
+
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="brand-and-navBtn">
+    <span class="navBtn">☰</span>
+    <li><a href="Home.html" class="navBtn">Gallery</a></li> 
+    <span class="brand-name">Wedding Albums</span>
+  </div>
+
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <section class="photo-section">
+        <h2>wedding photos</h2>
+        <p>People feel good in front of the camera only when you learn to help them feel comfortable being there! It is about infusing them with your passion and educating them about how much they will enjoy the process.</p>
+        <br>
+        <div class="photo-gallery">
+            <img src="wedding/wedding3.jpeg" alt="Image 1">
+            <img src="wedding/wedding-2.jpg"alt="Image 2">
+            <img src="wedding/wedding4.jpeg" alt="Image 3">
+            <img src="wedding/wedding-4.jpg" alt="Image 4">
+            <img src="wedding/wedding6.jpeg" alt="Image 5">
+            
+        </div>
+    </section>
+    
+    <section class="photo-section">
+        <h2>Preeshoots</h2>
+        <p>The pre-Wedding shoot takes place just before the marriage. It is a short and sweet session of photography with the wedding photographer. The most crucial aim of the shoot is to face the camera, pose in front of the photographer, and get a beautiful, romantic, and heart-breath collection of photos well before your wedding. Today, we will see some Pre-Wedding to make your pre-wedding more special.</p>
+        <br>
+        <div class="photo-gallery">
+            <img src="wedding/pre1.jpeg" alt="Image 6">
+            <img src="wedding/pre2.jpeg" alt="Image 7">
+            <img src="wedding/pre3.jpeg" alt="Image 8">
+            <img src="wedding/pre4.jpeg" alt="Image 9">
+            <img src="wedding/pre5.jpeg" alt="Image 10">
+        </div>
+    </section>
+
+    <!-- Add more sections for additional categories -->
+
+</div>
+
+<!-- Footer -->
+ <!-- Footer -->
+ <footer class="footer">
+    <div class="footer-container container">
+        <div>
+            <h2>Malcolm Lismore</h2>
+        </div>
+        <div>
+          <h3>Free Subscription!</h3>
+          <p>The Independent Photographer is a global network celebrating photography through a set of acclaimed monthly awards, online magazines & digital art collections.</p>
+            
+            <div class="subs">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" placeholder="Email Address">
+                <button type="submit">Subscribe</button>
+            </div>
+        </div>
+    </div>
+    <p>&copy; Copyright Malcolm Lismore@2024 . Design by @Sureka</p>
+</footer>
+<!-- End of footer -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var navBtn = document.querySelector('.navBtn'); // Assumes first .navBtn is the toggle
+
+    navBtn.addEventListener('click', function() {
+      var galleryLink = this.nextElementSibling; // Assumes the Gallery link is always next
+      
+      // Toggle display
+      if (galleryLink.style.display === 'none' || galleryLink.style.display === '') {
+        galleryLink.style.display = 'block'; // Show
+      } else {
+        galleryLink.style.display = 'none'; // Hide
+      }
+    });
+  });
+</script>
+<script src="main.js"></script>
+</body>
+</html>

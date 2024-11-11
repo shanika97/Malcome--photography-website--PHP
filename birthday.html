@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malcolm lismore</title>
+    <mata name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+
+    <style>
+
+
+
+.contain{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 400px;
+    background: #f5f5f5;
+    box-shadow: 0 30px 50px #dbdbdb;
+	
+}
+
+.contain .slide .item{
+    width: 200px;
+    height: 400px;
+    position: absolute;
+    top: 40%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.slide .item:nth-child(3){
+    left: 50%;
+}
+.slide .item:nth-child(4){
+    left: calc(50% + 220px);
+}
+.slide .item:nth-child(5){
+    left: calc(50% + 440px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6){
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+
+
+
+.item .content{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #f5f7fb;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+    font-weight: 900;
+}
+
+
+.slide .item:nth-child(2) .content{
+    display: block;
+}
+
+
+.content .name{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+    font-weight: 900;
+}
+
+.content button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+
+@keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+
+
+.button{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.button button{
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+
+.button button:hover{
+    background: #ababab;
+    color: #fff;
+}
+    </style>
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="nav-section">
+        <div class="brand-and-navBtn">
+            <span class="brand-name">
+                MALCOLM LISMORE
+            </span>
+            <span class="navBtn flex">
+                <i class="fas fa-bars"></i>
+            </span>
+        </div> 
+
+        <!--navgation menu-->
+        <nav class="top-nav">
+            <ul>
+                <li><a href="Home.html" >Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <!-- <li><a href="Gallery.php"class="active">Events Gallery</a></li> -->
+                <div class="dropdown">
+                    <button class="dropbtn"> Gallery 
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="Gallery.php">Events Gallery</a>
+                      <a href="wedding.html">Wedding Albums</a>
+                      
+                      <a href="birthday.html">Birthdays</a>
+                      <a href="Nature.html">Nature</a>
+                    </div>
+                  </div> 
+                <li><a href="contact.php">Contact</a></li>
+                <li><a href="Prices.php">Rates</a></li>
+                
+                <li><a href="register.php">Register</a></li>
+            </ul>
+        </nav>
+        <span class="search-icon">
+            <i class="fas fa-search"></i>
+        </span>
+    </div>
+
+    
+</header>
+<div class="cont">
+
+    <div class="contain">
+
+        <div class="slide">
+
+          
+            <div class="item" style="background-image: url(birthday/birth1.jpeg);">
+                <div class="content">
+
+                    
+                    
+                </div>
+            </div>
+            <div class="item" style="background-image: url(birthday/birth2.jpeg);">
+              <div class="content">
+
+                 
+              </div>
+          </div>
+            <div class="item" style="background-image: url(birthday/birth3.jpeg);">
+                <div class="content">
+
+                   
+                </div>
+            </div>
+  
+            <div class="item" style="background-image: url(birthday/birth4.jpeg);">
+              <div class="content">
+
+                 
+              </div>
+          </div>
+  
+          <div class="item" style="background-image: url(birthday/birth5.jpeg);">
+              <div class="content">
+
+                 
+              </div>
+          </div>
+  
+            <div class="item" style="background-image: url(birthday/birth6.jpeg);">
+                <div class="content">
+
+                   
+                </div>
+            </div>
+            
+            <div class="item" style="background-image: url(birthday/birth7.jpeg);">
+                <div class="content">
+
+                    
+                </div>
+            </div>
+
+            <div class="item" style="background-image: url(birthday/birth8.jpeg);">
+                <div class="content">
+
+                    
+                </div>
+            </div>
+
+            <div class="item" style="background-image: url(birthday/birth9.jpeg);">
+                <div class="content">
+       
+                    
+                </div>
+
+             <div class="item" style="background-image: url(birthday/birth10.jpeg);">
+                    <div class="content">
+                
+                        
+                    </div>
+                </div>
+
+
+            </div>
+            
+  
+        </div>
+
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+    </div>
+
+</div>
+
+<!--footer-->
+<footer class="footer">
+    <div class="footer-container container">
+        <div>
+            <h2>Malcolm lismore</h2>
+            <p>
+                "To me, photography embodies the art of perception. It entails discovering something captivating within the commonplace... I've come to realize that it's less about the objects you observe and more about the perspective from which you view them."</p>
+        </div>
+        <div>
+            <h3>Free Subscription!</h3>
+            <p>The Independent Photographer is a global network celebrating photography through a set of acclaimed monthly awards, online magazines & digital art collections.!</p>
+
+            <div class="subs">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email"
+                placeholder="Email Address">
+                <button type="submit">SUBSCRIBE</button>
+            </div>
+        </div>
+    </div>
+    <p>&copy; Copyright Malcolm Lismore@2024 . Design by @Sureka</p>
+</footer>
+<!--end of footer-->
+<script src="nature.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

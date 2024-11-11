@@ -1,0 +1,175 @@
+:root {
+    --white: #ddd;
+    --dark: #111;
+    --darkGrey: #474b4f;
+    --lightGrey: #6b6e70;
+    --lightgreen: #e0ef12;
+    --darkGreen: #1e995e;
+    --transition: all 0.5s ease;
+  }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+.header {
+    background-color: #23c6b3;
+    color: #1d1a1a;
+    text-align: Left;
+    padding: 20px 0;
+    padding-left: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.brand-name {
+    font-size: 34px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+
+.navBtn {
+  width: 60px;
+  height: 50px;
+  border: 2px solid var(--white);
+  cursor: pointer;
+  font-size: 15px;
+}
+.navBtn:hover {
+  background: #f8f6f6;
+  color: #150707;
+  transition: var(--transition);
+}
+.top-nav {
+  background: #efeaea;
+  transform: translateY(-600px);
+  transition: var(--transition);
+}
+.showNav {
+  transform: translateY(0);
+}
+.search-icon {
+  display: none;
+}
+.top-nav ul li {
+  padding: 10px 0;
+}
+.top-nav ul a {
+  position: relative;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  display: block;
+}
+.top-nav ul a::after {
+  content: "";
+  height: 2px;
+  background: var(--lightgreen);
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  transition: var(--transition);
+}
+.top-nav ul a:hover::after {
+  width: 100px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.photo-section {
+    margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.photo-section h2 {
+    font-size: 24px;
+    color: #10a3e2;
+    margin-bottom: 20px;
+}
+
+.photo-section p {
+    font-size: 16px;
+    color: #080808;
+    margin-bottom: 20px;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.photo-gallery img {
+    width: calc(20% - 10px);
+    margin-bottom: 20px;
+}
+/***************************footer styling*************************************/
+
+.footer {
+    background: var(--dark);
+    color: #f3df7d;
+    padding: 40px 0;
+    text-align: center;
+  }
+  .footer-container h2 {
+    color: var(--lightgreen);
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: 7px;
+  }
+  .footer-container p {
+    opacity: 0.7;
+  }
+  .subs {
+    background: #929090;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto;
+  }
+  .subs i {
+    font-size: 26px;
+    flex: 10%;
+    display: block;
+  }
+  .subs input {
+    flex: 60%;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    padding: 0 5px;
+    outline: 0;
+    color: #fff;
+  }
+  .subs button {
+    flex: 30%;
+    font-size: 16px;
+    padding: 15px 0;
+    font-weight: bold;
+    background: var(--lightgreen);
+    border: none;
+    transition: var(--transition);
+    cursor: pointer;
+  }
+  .subs button:hover {
+    color: #fff;
+  }
+  .footer > p {
+    text-align: center;
+    font-size: 14px;
+  }
